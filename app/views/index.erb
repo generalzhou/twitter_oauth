@@ -24,9 +24,10 @@
 
   <% if current_user %>
     <form action='/tweet' method='post'>
-      <input type='text' name='tweet' placeholder="tweet">
+      <input id="tweet_area" type='textarea' cols="50" rows="20" name='tweet' placeholder="tweet">
       <input type='submit'>
     </form>
+    <div id="characters_left">140</div>
   <% end %>
 
   

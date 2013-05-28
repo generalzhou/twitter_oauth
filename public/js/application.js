@@ -1,7 +1,12 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
-
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
-});
+    $('#tweet_area').keyup(function(e){
+      var form_val = $(this).val(); 
+      console.log(form_val.length);
+      $('#characters_left').html(140-form_val.length) 
+      if (form_val.length > 140) {
+          $('#tweet_area').css('background-color', '#FF9999');
+        } else {
+          $('#tweet_area').css('background-color', 'white');
+        }
+    });
+  });
